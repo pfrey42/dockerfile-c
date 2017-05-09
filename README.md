@@ -1,9 +1,9 @@
-//*********** POUR UTILISER LE DOCKERFILE ***********\\
+//*********** POUR UTILISER LE DOCKERFILE ***********\\\
 
 intaller docker:
 https://docs.docker.com/engine/installation/
 
-//*********** INSTALL ***********\\
+//*********** INSTALL ***********\\\
 
 Depuis le dossier où se trouve le dockerfile:
 docker build -t c-pool .
@@ -16,7 +16,7 @@ Voila le container docker est créer et on est dans son shell
 Pour quiter:
 exit
 
-//*********** LAUNCH ***********\\
+//*********** LAUNCH ***********\\\
 
 Faire
 docker ps
