@@ -1,9 +1,9 @@
-#POUR UTILISER LE DOCKERFILE
+# POUR UTILISER LE DOCKERFILE
 
 intaller docker:
 https://docs.docker.com/engine/installation/
 
-##INSTALL
+## INSTALL
 
 Depuis le dossier où se trouve le dockerfile:
 
@@ -21,7 +21,7 @@ Pour quiter:
 
 ```exit```
 
-##LAUNCH
+## LAUNCH
 
 Faire
 ```docker ps```
