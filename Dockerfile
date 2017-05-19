@@ -1,18 +1,3 @@
-#INSTALL
-#Depuis le dossier ou ce trouve le dockerfile
-#docker build -t c-pool .
-#Depuis le dossier partager (par exemple créer un dossier Coding dans le home)
-#docker run --name c_pool -it -v "$PWD":/usr/Rendu -w /usr/Rendu c-pool /bin/bash
-
-
-#LAUNCH
-#docker ps
-#si c_pool n'est pas afficher
-#docker start c_pool
-#docker exec -i -t c_pool /bin/bash
-#sinon
-#docker exec -i -t c_pool /bin/bash
-
 FROM debian:jessie
 
 RUN apt-get update && apt-get install -y \
@@ -40,6 +25,12 @@ RUN apt-get update && apt-get install -y \
     nano\
 	manpages-dev\
     && rm -rf /var/lib/apt/lists/*
+
+RUN groupadd -f -g 1000 name_user && \
+    useradd -u 1000 -g name_user name_user && \
+    mkdir -p /home/name_user
+
+RUN chown -R name_user:name_user /home/name_user
 
 
 CMD ["/bin/bash"]
